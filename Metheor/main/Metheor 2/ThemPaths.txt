@@ -1,0 +1,7 @@
+img/home/intro/intro-bg02.jpg
+
+img/home/intro/phone.png
+
+intro-bg01
+
+.box-with-icon-wrap .box-with-icon .bwi-icon>img

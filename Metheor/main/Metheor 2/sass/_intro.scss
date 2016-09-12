@@ -1,0 +1,296 @@
+//
+// Intro Section
+// --------------------------------------------------
+
+.intro-section {
+  position: relative;
+  width: 100%;
+  padding-top: ($line-height-computed * 9);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+  }
+  .container,
+  .container-fluid,
+  .row {
+    position: relative;
+    z-index: 5;
+  }
+  .btn { margin: 0; }
+  &.parallax { background-attachment: fixed; }
+  .intro-phone-wrap {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: $intro-phone-wrap-width;
+    height: $intro-phone-wrap-height;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+    .phone {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      max-width: $intro-phone-width;
+      margin: 0 auto;
+      .screen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 26.5% 11.75% 0 11.75%;
+      }
+    }
+    .screen-first-left,
+    .screen-first-right,
+    .screen-second-left,
+    .screen-second-right {
+      position: absolute;
+      width: 100%;
+      max-width: $intro-phone-screen-width;
+      @include box-shadow(0px 0px 26px 0px rgba(0,0,0,0.4));
+    }
+    .screen-first-left,
+    .screen-first-right {
+      z-index: 3;
+      top: 20% !important;
+    }
+    .screen-first-right {
+      right: 16.8% !important;
+      left: auto !important;
+    }
+    .screen-first-left { left: 16.8% !important; }
+    .screen-second-left,
+    .screen-second-right {
+      z-index: 2;
+      top: 30% !important;
+    }
+    .screen-second-left { left: 15px !important; }
+    .screen-second-right {
+      right: 15px !important;
+      left: auto !important;
+    }
+    @media #{$tablet-land} {
+      .screen-first-left { left: 30px !important; }
+      .screen-first-right { right: 30px !important; }
+      .screen-second-left,
+      .screen-second-right { display: none !important; }
+    }
+    @media screen and (max-width: 720px) {
+      .screen-first-left,
+      .screen-first-right { display: none !important; }
+    }
+    @media screen and (max-width: 400px) {
+      height: $intro-phone-wrap-height - 100;
+    }
+  }
+  .inner-shadow {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: -10px;
+    @include box-shadow(0px -5px 25px 0px rgba(0,0,0,0.16));
+  }
+  .inline-btns .btn { margin: 10px; }
+  @media #{$nav-collapse} {
+    padding-top: ($line-height-computed * 6);
+  }
+}
+
+// Intro with Phone Carousel
+.phone-carousel {
+  max-width: $intro-phone-width;
+  padding-top: 20px;
+  height: $intro-phone-wrap-height - 10;
+  margin: auto;
+  overflow: hidden;
+  @include user-select(none);
+  .phone {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    .inner {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 26.5% 11.75% 0 11.75%;
+    }
+  }
+  .owl-controls {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -38px;
+  }
+}
+.video-popup-placeholder {
+  display: inline-block;
+  width: 100%;
+  max-width: 620px;
+  position: relative;
+  background-color: #000;
+  @include box-shadow(0px 0px 30px 0px rgba(0,0,0,0.25));
+  margin-bottom: floor($line-height-computed * 1.2);
+  > img { opacity: .8; }
+  .video-popup-btn {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    // margin: -($video-popup-btn-size / 2) 0 0 -($video-popup-btn-size / 2);
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+// Disable Parallax for Touch Devices
+.touch .intro-section.parallax {
+  background-attachment: scroll;
+}
+
+
+// Comparison Slider
+.compar-slider-wrap {
+	position: relative;
+	width: 100%;
+	max-width: 920px;
+	margin: auto;
+  margin-top: 80px;
+
+	.cs-label {
+		position: absolute;
+		top: -30px;
+		right: 60px;
+		font-size: $label-font-size;
+		color: $label-color;
+
+		@media #{$tablet-port} {
+			right: 40px;
+		}
+
+		&:first-child {
+			right: auto;
+			left: 60px;
+
+			@media #{$tablet-port} {
+				left: 40px;
+			}
+		}
+	}
+}
+.compar-slider {
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	overflow: hidden;
+
+	.macbook {
+		display: block;
+		width: 100%;
+	}
+	.screen {
+		position: absolute;
+		z-index: 1;
+		top: 9.6%;
+		left: 6.75%;
+		right: 7%;
+		overflow: hidden;
+	}
+}
+.cd-image-container {
+	position: relative;
+	width: 100%;
+	margin: 0em auto;
+
+	img {
+		display: block;
+	}
+}
+.cd-resize-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	/* Force Hardware Acceleration in WebKit */
+	@include transform(translateZ(0));
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		height: 100%;
+		width: auto;
+		max-width: none;
+	}
+
+	.is-visible & {
+		width: 50%;
+		/* bounce in animation of the modified image */
+		@include animation(cd-bounce-in $bounce-in-duration);
+	}
+}
+
+@include keyframes(cd-bounce-in) {
+	0% {
+		width: 0;
+	}
+
+	60% {
+		width: 55%;
+	}
+
+	100% {
+		width: 50%;
+	}
+}
+.cd-handle {
+	position: absolute;
+	height: 44px;
+	width: 44px;
+	/* center the element */
+	left: 50%;
+	top: 50%;
+	margin-left: -22px;
+	margin-top: -22px;
+	border-radius: 50%;
+	background: $handle-color url('../img/cd-arrows.svg') no-repeat center center;
+	cursor: move;
+	box-shadow: 0 0 0 6px rgba(#000, .2), 0 0 10px rgba(#000, .6), inset 0 1px 0 rgba(#fff, .3);
+	opacity: 0;
+	@include transform(translate3d(0,0,0) scale(0));
+
+	&.draggable {
+		/* change background color when element is active */
+		background-color: $handle-color-active;
+	}
+
+	.is-visible & {
+		opacity: 1;
+		@include transform(translate3d(0,0,0) scale(1));
+		-webkit-transition: -webkit-transform .3s $bounce-in-duration, opacity 0s $bounce-in-duration;
+		-moz-transition: -moz-transform .3s $bounce-in-duration, opacity 0s $bounce-in-duration;
+		transition: transform .3s $bounce-in-duration, opacity 0s $bounce-in-duration;
+	}
+}

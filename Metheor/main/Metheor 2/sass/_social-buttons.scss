@@ -1,0 +1,390 @@
+//
+// Social Buttons
+// --------------------------------------------------
+
+/* Base class */
+.social-bar {
+	display: inline-block;
+	a {
+		display: inline-block;
+		width: $social-btn-size;
+		height: $social-btn-size;
+		line-height: $social-btn-size - 2;
+		font-size: $social-btn-font-size;
+		text-decoration: none;
+		text-align: center;
+		border: 1px solid $gray-dark;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		margin-right: 4px;
+		margin-bottom: 7px;
+		@include transition(all .3s);
+	}
+	&.text-center {
+		a {
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+	}
+	&.text-right {
+		a {
+			margin-left: 4px;
+			margin-right: 0;
+		}
+	}
+}
+.text-center {
+	.social-bar a {
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+}
+.text-right {
+	.social-bar a {
+		margin-left: 4px;
+		margin-right: 0;
+	}
+}
+
+/* Email / Link */
+.sb-email,
+.sb-link {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: $brand-primary !important;
+		border-color: $brand-primary !important;
+	}
+}
+
+/* Behance */
+.sb-behance {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #1769ff !important;
+		border-color: #1769ff !important;
+	}
+}
+
+/* Bitbucket */
+.sb-bitbucket {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #205081 !important;
+		border-color: #205081 !important;
+	}
+}
+
+/* CodePen */
+.sb-codepen {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #76daff !important;
+		border-color: #76daff !important;
+	}
+}
+
+/* DeviantArt */
+.sb-deviantart {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #4e6252 !important;
+		border-color: #4e6252 !important;
+	}
+}
+
+/* Digg */
+.sb-digg {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #000 !important;
+		border-color: #000 !important;
+	}
+}
+
+/* Dribbble */
+.sb-dribbble {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #ea4c89 !important;
+		border-color: #ea4c89 !important;
+	}
+}
+
+/* Dropbox */
+.sb-dropbox {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #007ee5 !important;
+		border-color: #007ee5 !important;
+	}
+}
+
+/* Facebook */
+.sb-facebook {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #3b5998 !important;
+		border-color: #3b5998 !important;
+	}
+}
+
+/* Flickr */
+.sb-flickr {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #0063dc !important;
+		border-color: #0063dc !important;
+	}
+}
+
+/* Foursquare */
+.sb-foursquare {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #ef4b78 !important;
+		border-color: #ef4b78 !important;
+	}
+}
+
+/* GitHub */
+.sb-github {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #4183c4 !important;
+		border-color: #4183c4 !important;
+	}
+}
+
+/* Google+ */
+.sb-google-plus {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #dd4b39 !important;
+		border-color: #dd4b39 !important;
+	}
+}
+
+/* Instagram */
+.sb-instagram {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #3f729b !important;
+		border-color: #3f729b !important;
+	}
+}
+
+/* Jsfiddle */
+.sb-jsfiddle {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #4679bd !important;
+		border-color: #4679bd !important;
+	}
+}
+
+/* LastFM */
+.sb-lastfm {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #e31b23 !important;
+		border-color: #e31b23 !important;
+	}
+}
+
+/* LinkedIn */
+.sb-linkedin {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #0976b4 !important;
+		border-color: #0976b4 !important;
+	}
+}
+
+/* PayPal */
+.sb-paypal {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #253b80 !important;
+		border-color: #253b80 !important;
+	}
+}
+
+/* Pinterest */
+.sb-pinterest {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #cc2127 !important;
+		border-color: #cc2127 !important;
+	}
+}
+
+/* Reddit */
+.sb-reddit {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #ff4500 !important;
+		border-color: #ff4500 !important;
+	}
+}
+
+/* Skype */
+.sb-skype {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #00aff0 !important;
+		border-color: #00aff0 !important;
+	}
+}
+
+/* SoundCloud */
+.sb-soundcloud {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #f80 !important;
+		border-color: #f80 !important;
+	}
+}
+
+/* Stack Overflow */
+.sb-stackoverflow {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #fe7a15 !important;
+		border-color: #fe7a15 !important;
+	}
+}
+
+/* Steam */
+.sb-steam {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #7da10e !important;
+		border-color: #7da10e !important;
+	}
+}
+
+/* StumbleUpon */
+.sb-stumbleupon {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #eb4924 !important;
+		border-color: #eb4924 !important;
+	}
+}
+
+/* Trello */
+.sb-trello {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #256a92 !important;
+		border-color: #256a92 !important;
+	}
+}
+
+/* Tumblr */
+.sb-tumblr {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #35465c !important;
+		border-color: #35465c !important;
+	}
+}
+
+/* Twitch */
+.sb-twitch {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #6441a5 !important;
+		border-color: #6441a5 !important;
+	}
+}
+
+/* Twitter */
+.sb-twitter {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #55acee !important;
+		border-color: #55acee !important;
+	}
+}
+
+/* Vimeo */
+.sb-vimeo {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #1ab7ea !important;
+		border-color: #1ab7ea !important;
+	}
+}
+
+/* Vine */
+.sb-vine {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #00b488 !important;
+		border-color: #00b488 !important;
+	}
+}
+
+/* VKontakte */
+.sb-vk {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #45668e !important;
+		border-color: #45668e !important;
+	}
+}
+
+/* WeChat */
+.sb-wechat {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #98d11c !important;
+		border-color: #98d11c !important;
+	}
+}
+
+/* WordPress */
+.sb-wordpress {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #21759b !important;
+		border-color: #21759b !important;
+	}
+}
+
+/* XING */
+.sb-xing {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #026466 !important;
+		border-color: #026466 !important;
+	}
+}
+
+/* Yahoo! */
+.sb-yahoo {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #400191 !important;
+		border-color: #400191 !important;
+	}
+}
+
+/* Yelp */
+.sb-yelp {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #af0606 !important;
+		border-color: #af0606 !important;
+	}
+}
+
+/* YouTube */
+.sb-youtube {
+	color: $gray-dark;
+	&:hover, &:focus {
+		color: #e52d27 !important;
+		border-color: #e52d27 !important;
+	}
+}

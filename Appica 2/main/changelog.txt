@@ -1,0 +1,98 @@
+Version 2.0.2, 15-04-2016
+
+- added compatibility with WP 4.5
+- updated Visual Composer
+- fixed js errors
+- fixed Visual Composer mapping
+- minor bugfixing and improvements 
+
+Version 2.0.1, 23-02-2016
+
+- added Appica App Store shortcode
+- added Appica Google Play shortcode
+- fixed App Store download url in Intro
+- fixed Appica Feature arrow issue
+- fixed import/export tab in theme options
+- fixed missing callback for flushing transients
+- fixed TGM styling
+- fixed anchored menu issue
+- fixed waves effect in blog tiles
+- fixed overlay issue in Appica Recent Posts widget
+- removed css animations
+
+
+Version 2.0.0, 29-12-2015
+
+- add new corporate landing page (ios)
+- add taxonomies to App Gallery, Team, Timeline and Gadgets Slideshow post types
+- add Query Builders to Gadgets Slideshow, Timeline, Gallery, App Gallery and Team shortcodes for more flexibility
+- add Intro post type, prepare as many intros as you want. Multi languages suppor through plugins
+- two buttons on intro screen: app store and google play
+- add support for WordPress favicon
+- update Visual Composer to latest version
+- update Revolution Slider to the latest version
+- update the deprecated VC tabs and tours
+- update page settings meta box, now allows to enable Intro or Revolution slider on any page
+- fixed Flaticons in VC
+- fixed the Google Fonts
+- fixed Appica Feature shortcode
+- drop archive-appica_news.php in favor of shortcode 
+- drop Team 2 (yeah!) now a single team with different tile templates you can choose in shortcode attributes
+- better code and file structure organization
+- numerous bug fixes and small improvements
+
+Version 1.3.2, 06-10-2015
+
+- fixed XSS security vulnerability in the Visual Composer
+- updated Visual Composer to version 4.7.4
+
+Version 1.3.1, 16-06-2015
+
+- fixed prettyPhoto XSS
+- updated Visual Composer to version 4.5.3
+- updated help file
+
+Version 1.3.0, 15-06-2015
+
+- added Portfolio
+- added Revolution Slider plugin
+- added Revolution Slider support in Intro Section
+- updated help file
+- updated demo files
+- updated Appica Core to version 1.3.0
+- updated smoothscroll.js plugin
+- fixed shortcode "Appica Feature"
+- fixed sorting bug in "Appica Pricing Plans" shortcode
+- fixed footer styles
+
+Version 1.2.1, 05-06-2015
+
+- fixed issue with Flaticons pack inside Visual Composer
+- updated help file
+
+Version 1.2.0, 04-06-2015
+
+- added color variations for iPhone and iPad in iOS version
+- added Appica MailChimp shortcode
+- added filters for feature icons
+- added target option for social links
+- updated Visual Composer to version 4.5.2
+- update Appica Core to version 1.2.0
+- updated help file
+- fixed bug with wrong path to localization files in Appica Core
+- fixed shortcode Gadgets Slideshow
+
+Version 1.1.0, 15-05-2015
+
+- added unlimited time variations in Pricing Plans
+- updated Visual Composer to version 4.5.1
+- updated Appica Core plugin to version 1.1.0
+- updated CF7 form snippet in demo.xml/help
+- updated help file
+- updated import files
+- fixed anchored scrolling issue in android version
+- fixed textarea issue in contact/comment forms
+
+Version 1.0.0, 06-05-2015
+
+- Initial release

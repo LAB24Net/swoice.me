@@ -1,0 +1,176 @@
+//
+// Carousel
+// --------------------------------------------------
+
+/*
+ *  Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  @include transition(height 400ms);
+}
+
+/*
+ *  Core Owl Carousel Styles
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+  .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    &:after {
+      content: ".";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
+  }
+  .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  .owl-controls {
+    text-align: center;
+    .owl-nav .owl-prev,
+    .owl-nav .owl-next,
+    .owl-dot {
+      cursor: pointer;
+      @include user-select(none);
+    }
+    .owl-nav {
+      .owl-prev, .owl-next {
+        position: absolute;
+        display: block;
+        top: 50%;
+        margin-top: -$carousel-navs-size / 2;
+        width: $carousel-navs-size;
+        height: $carousel-navs-size;
+        text-align: center;
+        font-size: $carousel-navs-arrow-size;
+        color: $carousel-navs-color;
+        background-color: #fff;
+        border-radius: 50%;
+        @include transition(color .3s ease-out);
+        &:before { font-family: "feather"; }
+        &:hover {
+          color: $carousel-navs-hover-color;
+        }
+      }
+      .owl-prev { left: 15px; }
+      .owl-next { right: 15px; }
+      .owl-prev:before,
+      .owl-next:before {
+        display: block;
+        line-height: $carousel-navs-size - 4;
+      }
+      .owl-prev:before { content: "\e094"; }
+      .owl-next:before { content: "\e095"; }
+    }
+
+    .owl-dots {
+      position: relative;
+      margin-top: $line-height-computed;
+      z-index: 10;
+      .owl-dot {
+        position: relative;
+        display: inline-block;
+        width: $carousel-dots-size;
+        height: $carousel-dots-size;
+        border-radius: 50%;
+        border: 1px solid $carousel-dots-color;
+        background-color: transparent;
+        margin: 0 6px 7px 6px;
+        @include transition(all .3s);
+        &:before {
+          position: absolute;
+          display: block;
+          content: "";
+          width: $carousel-dots-size - 8;
+          height: $carousel-dots-size - 8;
+          top: 3px;
+          left: 3px;
+          background-color: $carousel-dots-active-color;
+          border-radius: 50%;
+          opacity: 0;
+          @include transform(scale(0));
+          @include transition(all .3s);
+        }
+        &:after {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 12px;
+          height: 1px;
+          background-color: $carousel-dots-color;
+          left: $carousel-dots-size - 1;
+          top: 50%;
+        }
+        &:last-child:after { display: none; }
+        &.active {
+          background-color: transparent;
+          border-color: $carousel-dots-active-color;
+          &:before {
+            opacity: 1;
+            @include transform(scale(1));
+          }
+        }
+      }
+    }
+  }
+  &.owl-loaded { display: block; }
+  &.owl-loading {
+    opacity: 0;
+    display: block;
+  }
+  &.owl-hidden { opacity: 0; }
+  .owl-refresh .owl-item { display: none; }
+  .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    img {
+      display: block;
+      margin: 0 auto;
+      -webkit-transform-style: preserve-3d;
+    }
+  }
+  &.owl-text-select-on .owl-item {
+    @include user-select(auto);
+  }
+  .owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+  }
+  &.owl-rtl {
+    direction: rtl;
+    .owl-item { float: right; }
+  }
+}
+
+/* No Js */
+.no-js .owl-carousel { display: block; }
+
+/*
+ *  Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  @include transition(opacity 400ms);
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}

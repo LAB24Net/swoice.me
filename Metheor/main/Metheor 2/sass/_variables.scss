@@ -1,0 +1,402 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+
+//
+//## Gray and brand colors for use across Theme.
+
+$gray-darker:            #2b2b2b;
+$gray-dark:            	 #333;
+$gray:                   #666;
+$gray-light:             #999;
+$gray-lighter:           #f4f4f4;
+
+$brand-default:         $gray-darker;
+$brand-primary:         #00ab6b;
+$brand-info:		        #3498db;
+$brand-success:         #4fcdbd;
+$brand-warning:         #fcab53;
+$brand-danger:          #e74c3c;
+
+$body-bg: 							#fff;
+$border-color:					#e7e7e7;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: 			"Raleway", Helvetica, Arial, sans-serif;
+$text-color: 						$gray;
+$text-weight: 					normal;
+
+$font-size-base:          14px;
+$font-size-lead:          floor(($font-size-base * 1.286)); // ~18px
+$font-size-lg: 						floor(($font-size-base * 1.143)); // ~16px
+$font-size-sm: 						floor(($font-size-base * 0.93)); // ~13px
+$font-size-xs:         		ceil(($font-size-base * 0.857)); // ~12px
+
+$font-size-h1:            floor(($font-size-base * 3)); // ~42px
+$font-size-h2:            floor(($font-size-base * 2.43)); // ~34px
+$font-size-h3:            floor(($font-size-base * 2)); // ~28px
+$font-size-h4:            floor(($font-size-base * 1.58)); // ~22px
+$font-size-h5:            $font-size-lead; // ~18px
+$font-size-h6:            $font-size-lg; // ~16px
+
+$headings-color:	 				$gray-dark;
+$font-weight-h1:          200;
+$font-weight-h2:          200;
+$font-weight-h3:          300;
+$font-weight-h4:          normal;
+$font-weight-h5:          600;
+$font-weight-h6:          600;
+
+$font-style-h1:          normal;
+$font-style-h2:          normal;
+$font-style-h3:          normal;
+$font-style-h4:          normal;
+$font-style-h5:          normal;
+$font-style-h6:          normal;
+
+$text-transform-h1:      none;
+$text-transform-h2:      none;
+$text-transform-h3:      none;
+$text-transform-h4:      none;
+$text-transform-h5:      none;
+$text-transform-h6:      none;
+
+$quote-font-size: 				$font-size-lead;
+$quote-bg: 								$gray-lighter;
+$quote-text-transform: 		none;
+$quote-font-weight: 			normal;
+$quote-font-style: 				italic;
+$quote-font-color:				$gray-dark;
+$quote-author-font-color: $gray-light;
+$quote-mark-size: 				44px;
+
+$line-height-base:        1.5;
+$headings-line-height:   	1.3;
+$line-height-computed:    24px;
+
+$link-color: 							$brand-primary;
+$link-hover-color: 				$brand-primary;
+
+$hr-border: 							$border-color;
+$border-radius-large: 		18px;
+
+
+//== Forms
+//
+
+$input-height:								48px;
+$input-font-size: 						$font-size-sm;
+$input-bg: 										transparent;
+$input-color: 								$gray-dark;
+$input-border-color: 					rgba($gray-dark, .2);
+$input-focus-border-color: 		rgba($gray-dark, 1);
+$input-color-placeholder: 		$gray-dark;
+$input-icon-size: 						24px;
+$input-icon-color: 						rgba($gray-dark, .5);
+$input-focus-icon-color: 			rgba($gray-dark, 1);
+
+$checkbox-radio-bg-color: 						$brand-default;
+$checkbox-checked-bg-color: 					$brand-default;
+$radio-checked-bg-color: 							$brand-default;
+$checkbox-radio-label-color: 					$gray-light;
+$checkbox-radio-label-font-size: 			$font-size-sm;
+$disabled-color: 											darken($gray-light, 7%);
+
+
+//== Buttons
+//
+
+$btn-font-size: 							$font-size-base;
+$btn-sm-font-size: 						$font-size-sm;
+$btn-font-weight: 						normal;
+$btn-sm-font-weight: 					normal;
+$btn-font-color: 							#fff;
+
+$btn-height: 									48px;
+$btn-sm-height: 							36px;
+
+$btn-default-bg: 							$brand-default;
+$btn-primary-bg: 							$brand-primary;
+$btn-success-bg: 							$brand-success;
+$btn-info-bg: 								$brand-info;
+$btn-warning-bg: 							$brand-warning;
+$btn-danger-bg: 							$brand-danger;
+$btn-light-bg: 								#fff;
+
+$scroll-top-btn-size: 				40px;
+$scroll-top-btn-font-size: 		24px;
+$scroll-top-btn-color: 				$brand-default;
+$scroll-top-btn-hover-color: 	$brand-primary;
+
+$social-btn-font-size: 				$font-size-base;
+$social-btn-size: 						30px;
+
+$border-radius-base: 					6px;
+
+
+//== Tables
+//
+
+$table-border-color: 					lighten($gray-light, 25%);
+$table-cell-padding:					15px;
+$table-bg-accent: 						$gray-lighter;
+
+
+//== Navbar / Logo
+//
+
+$navbar-zindex: 					1000;
+$navbar-stuck-bg: 				#fff;
+
+$logo-width: 							125px;
+
+$nav-link-font-size: 				  $font-size-sm;
+$nav-link-color: 						  $gray-dark;
+$nav-link-hover-color: 			  $brand-primary;
+$nav-link-has-dropdown-icon:  "+";
+$nav-link-has-dropdown-icon2: "–";
+
+$submenu-width: 					225px;
+$submenu-bg: 							#fff;
+$submenu-link-font-size: 	$font-size-small; // 13px;
+$submenu-link-bg: 				#f6f6f6;
+
+$search-box-width:        300px;
+$search-button-icon-size: 22px;
+
+$nav-toggle-width: 				25px;
+$nav-toggle-height: 			$btn-sm-height;
+$nav-toggle-color: 				$gray-darker;
+$mobile-menu-bg: 					#fff;
+$mobile-tools-bg: 				$gray-lighter;
+
+
+//== Page Title / Breadcrumbs
+//
+
+$page-title-overlay-opacity: 	.85;
+$breadcrumb-delimiter: 			 	"/";
+
+
+//== Sidebar / Widgets
+//
+$sidebar-max-width: 								340px;
+$sidebar-bg: 												$gray-lighter;
+$sidebar-padding: 									30px 24px;
+
+$widget-title-font-size: 						ceil(($font-size-base * 0.857)); // ~12px
+$widget-title-color: 								$gray-dark;
+
+$widget-border-color: 							#e3e3e3;
+
+$widget-insta-icon-size: 						22px;
+$widget-insta-icon-color: 					#fff;
+$widget-insta-overlay-color: 				$brand-default;
+$widget-insta-overlay-opacity: 			.65;
+
+$widget-tag-color: 									$brand-default;
+$widget-tag-hover-color: 						$brand-primary;
+$widget-tag-height: 								30px;
+$widget-tag-border-color: 					#dddddd;
+$widget-tag-counter-bg: 						#eeeeee;
+
+$widget-author-ava-size: 						60px;
+
+
+//== Side Navigation
+//
+$side-nav-max-width:					300px;
+$side-nav-bg: 								$gray-lighter;
+$side-nav-dark-bg: 						$brand-default;
+$side-nav-font-size: 					$font-size-sm;
+$side-nav-text-transform:     uppercase;
+$side-nav-li-border: 					1px solid $border-color;
+$side-nav-color: 							$brand-default;
+$side-nav-active-color: 			$brand-primary;
+
+
+//== Tabs
+//
+
+$nav-tabs-font-size:								floor($font-size-base * 0.9375); // 15px
+$nav-link-padding:									11px 20px;
+$nav-tabs-link-color: 							$brand-default;
+$nav-tabs-link-hover-color:  				$brand-primary;
+$nav-tabs-active-link-hover-bg: 		$gray-lighter;
+$nav-tabs-content-bg: 							$nav-tabs-active-link-hover-bg;
+$prev-next-btn-size: 								37px;
+
+
+//== Filters
+//
+
+$filters-label-color: 							$gray;
+$filters-link-color: 								$brand-default;
+$filters-link-hover-color: 					$brand-primary;
+$filters-link-icon-color: 					$gray;
+$filters-dropdown-width:					  248px;
+$filters-dropdown-bg:								#fff;
+
+
+//== Panels and Accordions
+//
+
+$panel-bg: 									#fff;
+$panel-border: 							1px solid $border-color;
+$panel-heading-font-size:  	floor(($font-size-base * 1.286)); // ~18px;
+$panel-heading-font-color:  $brand-default;
+$panel-heading-hover-color: $brand-primary;
+$panel-heading-padding-a: 	19px 40px 19px 20px;
+$panel-heading-padding-h:		20px;
+$panel-default-heading-bg: 	#fff;
+$panel-body-padding: 				0 20px 25px 20px;
+
+
+// Intro Section
+$intro-phone-wrap-width: 		1300px;
+$intro-phone-wrap-height: 	520px;
+$intro-phone-width: 		 		400px;
+$intro-phone-screen-width: 	306px;
+
+// Comparison slider
+$handle-color: 						$brand-primary;
+$handle-color-active: 		lighten($brand-primary, 8%);
+$bounce-in-duration: 		  .7s;
+$label-font-size: 				15px;
+$label-color: 					  #fff;
+
+
+// == Shortcodes
+//
+
+// Icon Box
+$icon-box-icon-color: 				$brand-primary;
+$icon-box-title-font-size: 		$font-size-lead;
+$icon-box-icon-size: 					46px;
+$icon-box-text-color: 				$gray-light;
+
+// Clients
+$client-width: 					150px;
+$client-opacity: 				.4;
+$client-hover-opacity: 	.9;
+
+//== Pricing Plans
+$pricing-accent-color:   $brand-primary;
+
+// Testimonials
+$testim-author-ava-size: 					72px;
+$testim-author-ava-border-color:  $brand-primary;
+
+//== Team
+$team-max-width:                  400px;
+$team-ava-size:                   130px;
+$team-ava-border-color:           $brand-primary;
+
+// Counters
+$counter-icon-size: 							48px;
+$counter-icon-color: 							$brand-primary;
+$counter-heading-size: 						floor($font-size-base * 3.125); // 50px
+$counter-subheading-size: 				floor($font-size-base * 1.125); // 18px
+$counter-subheading-color: 				$gray;
+
+// Video Popup Button
+$video-popup-btn-size: 						122px;
+$video-popup-icon-size: 					44px;
+$video-popup-btn-bg: 							rgba($brand-default, .04);
+$video-popup-btn-color: 					$brand-default;
+$video-popup-btn-hover-color:			$brand-primary;
+$video-popup-btn-light-bg: 				rgba(#fff, .15);
+$video-popup-btn-light-color: 		#fff;
+$video-popup-btn-light-hover-bg: 	rgba(#fff, 1);
+
+// Device Gallery
+$dg-device-max-width: 					368px;
+$dg-device-height: 							505px;
+$dg-thumb-width: 								176px;
+$dg-thumb-height: 							144px;
+$dg-thumb-gap: 									18px;
+$dg-thumb-bg: 									#f9f9f9;
+$dg-thumb-opacity: 							.65;
+$dg-thumb-active-border-color: 	$brand-primary;
+
+
+//== Tooltips
+//
+
+$tooltip-opacity:    		1;
+$tooltip-max-width:  		200px;
+$tooltip-bg: 				 		#202020;
+$tooltip-arrow-color: 	$tooltip-bg;
+
+
+//== Comments
+//
+
+$comment-author-ava-size: 	98px;
+
+
+//== Progress Bars
+//
+
+$pb-bg-color: 						$gray-light;
+$pb-height: 							6px;
+
+
+//== Footer
+//
+
+$footer-bg: 										$gray-lighter;
+$footer-dark-bg: 								$gray-darker;
+
+
+//== Tiles
+//
+
+$tile-padding: 						22px;
+$tile-bg: 								#fff;
+$tile-icon-size: 					52px;
+$tile-icon-color: 				$brand-primary;
+$tile-title-size:         floor(($font-size-base * 1.286)); // ~18px
+$tile-overlay-color:      #000;
+$tile-overlay-opacity: 		.6;
+$tile-gal-icon-color: 		#fff;
+
+
+//== Posts
+//
+
+$post-title-font-size: 								$font-size-h3;
+$post-meta-width: 										100px;
+$post-meta-bg: 										    $gray-darker;
+$post-meta-color: 										#fff;
+
+$post-author-ava-size: 								128px;
+
+
+//== Carousel
+//
+
+$carousel-navs-size: 				  40px;
+$carousel-navs-arrow-size: 	  24px;
+$carousel-navs-color: 			  $gray-light;
+$carousel-navs-hover-color:   $brand-primary;
+$carousel-dots-size: 				  15px;
+$carousel-dots-color: 			  #cacaca;
+$carousel-dots-active-color: 	$brand-primary;
+
+
+//== Media queries (responsive breackpoints)
+//## Descktop, Tablet, Mobile
+
+$desktop:   		   "screen and (max-width: 1200px)";
+$tablet-land:      "screen and (max-width: 991px)";
+$tablet-port:    	 "screen and (max-width: 768px)";
+$mobile-land:		 	 "screen and (max-width: 480px)";
+$mobile-port:		 	 "screen and (max-width: 360px)";
+$nav-collapse: 		 $tablet-land;

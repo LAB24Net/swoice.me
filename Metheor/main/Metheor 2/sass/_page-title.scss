@@ -1,0 +1,109 @@
+//
+// Page Title
+// --------------------------------------------------
+
+// Base Class
+.page-title {
+	position: relative;
+	width: 100%;
+	background-color: $gray-lighter;
+	padding: floor($line-height-computed * 8) 0 floor($line-height-computed * 6) 0;
+	margin-bottom: floor($line-height-computed * 3);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	.overlay {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.container {
+		position: relative;
+		z-index: 5;
+	}
+
+	h1 {
+		position: relative;
+		padding-top: 18px;
+		margin-bottom: $line-height-computed;
+		&:before {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $brand-primary;
+			top: 0;
+			left: 0;
+		}
+	}
+	&.text-center h1:before {
+		left: 50%;
+		margin-left: -25px;
+	}
+	&.text-right h1:before {
+		left: auto;
+		right: 0;
+	}
+
+	// Breadcrumbs
+	.breadcrumbs {
+		display: inline-block;
+		a, span {
+			display: inline-block;
+			font-size: $font-size-sm;
+			font-weight: normal;
+			color: $gray-dark;
+			text-decoration: none;
+			@include transition(color .25s);
+			&:before {
+				display: inline-block;
+				color: $gray-dark;
+				content: $breadcrumb-delimiter;
+				margin: 0 5px; 
+			}
+			&:first-child:before { display: none; }
+		}
+		a:hover { color: $brand-primary; }
+		span {
+			color: $gray-light;
+			cursor: default;
+		}
+	}
+
+	// Dark Page Title
+	&.pt-dark {
+		//background-color: $page-title-dark-bg;
+		h1 { color: #fff; }
+		.breadcrumbs {
+			a, span {
+				color: #fff;
+				&:before { color: #fff; }
+			}
+			span { color: rgba(#fff, .5); }
+			a:hover { color: $brand-primary; }
+		}
+	}
+	@media #{$nav-collapse} {
+		padding: floor($line-height-computed * 8) 0 floor($line-height-computed * 2.5) 0;
+	}
+	@media #{$tablet-port} {
+		padding: floor($line-height-computed * 7) 0 floor($line-height-computed * 2) 0;
+		margin-bottom: floor($line-height-computed * 2);
+		.inner, .title,
+		.breadcrumbs {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+		.title {
+			padding: 0;
+			.back-btn { display: none; }
+		}
+	}
+}
